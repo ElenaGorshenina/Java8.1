@@ -22,16 +22,16 @@ class RadioTest {
 
     @Test
     public void increaseFrequencyRadioTest() {
-        radio.setCurrentFrequencyRadio(9);
+        radio.setCurrentFrequencyRadio(7);
         radio.increaseFrequencyRadio();
-        assertEquals (0, radio.getFrequencyRadio());
+        assertEquals (8, radio.getFrequencyRadio());
     }
 
     @Test
     public void decreaseFrequencyRadioTest() {
-        radio.setCurrentFrequencyRadio(0);
+        radio.setCurrentFrequencyRadio(4);
         radio.decreaseFrequencyRadio();
-        assertEquals (9, radio.getFrequencyRadio());
+        assertEquals (3, radio.getFrequencyRadio());
     }
 
     @Test
@@ -49,15 +49,15 @@ class RadioTest {
 
     @Test
     public void increaseVolumeRadioTest() {
-        radio.setCurrentVolumeRadio(10);
+        radio.setCurrentVolumeRadio(6);
         radio.increaseVolumeRadio();
-        assertEquals (10, radio.getVolumeRadio());
+        assertEquals (7, radio.getVolumeRadio());
     }
 
     @Test
     public void decreaseVolumeRadioTest() {
-        radio.setCurrentVolumeRadio(0);
+        radio.setCurrentVolumeRadio(5);
         radio.decreaseVolumeRadio();
-        assertEquals (0, radio.getVolumeRadio());
+        assertEquals (4, radio.getVolumeRadio());
     }
 }
