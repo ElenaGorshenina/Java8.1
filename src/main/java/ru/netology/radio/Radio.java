@@ -6,7 +6,14 @@ public class Radio {
     private int maxFrequencyRadio = 9;
     private int currentVolumeRadio;
     private int minVolumeRadio = 0;
-    private int maxVolumeRadio = 10;
+    private int maxVolumeRadio = 100;
+
+    public Radio(){}
+
+    public Radio(int currentFrequencyRadio) {
+        this.currentFrequencyRadio = currentFrequencyRadio;
+        maxFrequencyRadio = currentFrequencyRadio;
+    }
 
     public void setCurrentFrequencyRadio(int currentFrequencyRadio) {
         if (currentFrequencyRadio < minFrequencyRadio) {
