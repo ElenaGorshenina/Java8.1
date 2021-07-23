@@ -35,10 +35,40 @@ class RadioTest {
     }
 
     @Test
+    public void inputNumberFrequencyRadio() {
+        Radio radio = new Radio(3);
+        assertEquals(3, radio.getFrequencyRadio());
+    }
+
+    @Test
+    public void increaseFrequencyRadioParam() {
+        Radio radio = new Radio(8);
+        radio.setCurrentFrequencyRadio(5);
+        radio.increaseFrequencyRadio();
+        assertEquals (6, radio.getFrequencyRadio());
+    }
+
+    @Test
+    public void decreaseFrequencyRadioParam() {
+        Radio radio = new Radio(8);
+        radio.setCurrentFrequencyRadio(0);
+        radio.decreaseFrequencyRadio();
+        assertEquals (8, radio.getFrequencyRadio());
+    }
+
+    @Test
+    public void notChangeFrequencyMoreMaxParam() {
+        Radio radio = new Radio(8);
+        //radio.setCurrentFrequencyRadio(8);
+        radio.setCurrentFrequencyRadio(11);
+        assertEquals (8, radio.getFrequencyRadio());
+    }
+
+    @Test
     public void notChangeVolumeMoreMaxTest() {
-        radio.setCurrentVolumeRadio(3);
-        radio.setCurrentVolumeRadio(11);
-        assertEquals (3, radio.getVolumeRadio());
+        radio.setCurrentVolumeRadio(100);
+        radio.setCurrentVolumeRadio(101);
+        assertEquals (100, radio.getVolumeRadio());
     }
     @Test
     public void notChangeVolumeLessMinTest() {
@@ -49,9 +79,9 @@ class RadioTest {
 
     @Test
     public void increaseVolumeRadioTest() {
-        radio.setCurrentVolumeRadio(6);
+        radio.setCurrentVolumeRadio(100);
         radio.increaseVolumeRadio();
-        assertEquals (7, radio.getVolumeRadio());
+        assertEquals (100, radio.getVolumeRadio());
     }
 
     @Test
