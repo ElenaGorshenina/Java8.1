@@ -11,8 +11,8 @@ public class Radio {
     public Radio(){}
 
     public Radio(int currentFrequencyRadio) {
-        this.currentFrequencyRadio = currentFrequencyRadio;
-        maxFrequencyRadio = currentFrequencyRadio;
+        this.currentFrequencyRadio = currentFrequencyRadio -1;
+        maxFrequencyRadio = this.currentFrequencyRadio;
     }
 
     public void setCurrentFrequencyRadio(int currentFrequencyRadio) {
