@@ -22,9 +22,9 @@ class RadioTest {
 
     @Test
     public void increaseFrequencyRadioTest() {
-        radio.setCurrentFrequencyRadio(7);
+        radio.setCurrentFrequencyRadio(9);
         radio.increaseFrequencyRadio();
-        assertEquals (8, radio.getFrequencyRadio());
+        assertEquals (0, radio.getFrequencyRadio());
     }
 
     @Test
